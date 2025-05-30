@@ -327,7 +327,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2322149156251990186, guid: ed7a6c9adc7f28845a270cd78c7c50e0, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -907,7 +907,7 @@ MonoBehaviour:
   rotacionIzquierdaFinal: {x: 0, y: -90, z: 0}
   rotacionDerechaFinal: {x: 0, y: 90, z: 0}
   velocidad: 2
-  sonidoPuertas: {fileID: 0}
+  sonidoPuertas: {fileID: 75155177}
 --- !u!4 &75155179
 Transform:
   m_ObjectHideFlags: 0
@@ -4308,6 +4308,7 @@ MonoBehaviour:
   tarea4Guantes: {fileID: 27763852}
   audioSource: {fileID: 898118368}
   sonidoCheck: {fileID: 8300000, guid: fd9074b26f6b2cf41a7f11c1da1d0094, type: 3}
+  misionActual: 1
 --- !u!4 &898118370
 Transform:
   m_ObjectHideFlags: 0
@@ -7722,6 +7723,73 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 69d8c128bceb6394aa69d849207e7dce, type: 3}
+--- !u!1 &1783504694
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1783504696}
+  - component: {fileID: 1783504695}
+  - component: {fileID: 1783504697}
+  m_Layer: 0
+  m_Name: portalpuertas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1783504695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1783504694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9f2c4e1bae2ee34a86183cc0a77a5a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  indiceEscenaDestino: 1
+--- !u!4 &1783504696
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1783504694}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.3, y: 1.07, z: -5.41}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1783504697
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1783504694}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 3.339463, y: 1, z: 1.7351694}
+  m_Center: {x: 0.007982135, y: 0, z: -0.3675847}
 --- !u!1 &1814327692 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8469512440737279949, guid: 4bd609be9ba5e3c45a1967040ce2ab58, type: 3}
@@ -9340,3 +9408,4 @@ SceneRoots:
   - {fileID: 898118370}
   - {fileID: 1713669182}
   - {fileID: 75155179}
+  - {fileID: 1783504696}

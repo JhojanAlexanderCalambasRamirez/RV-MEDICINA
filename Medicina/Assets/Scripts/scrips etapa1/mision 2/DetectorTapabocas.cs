@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
 public class DetectorTapabocas : MonoBehaviour
@@ -9,20 +9,23 @@ public class DetectorTapabocas : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        // ✅ Validar que sea la misión actual
+        if (panelMisiones == null || panelMisiones.misionActual != idMision) return;
+
+        // ✅ Validar que colisiona con el objeto correcto
         if (!other.CompareTag(tapabocasTag)) return;
 
-        // Soltar si est� agarrado
+        // Soltar si está agarrado
         XRGrabInteractable grab = other.GetComponent<XRGrabInteractable>();
         if (grab != null && grab.isSelected)
         {
             grab.interactionManager.SelectExit(grab.firstInteractorSelecting, grab);
         }
 
-        // Validar misi�n
-        if (panelMisiones != null)
-            panelMisiones.CompletarTarea(idMision);
+        // ✅ Completar misión
+        panelMisiones.CompletarTarea(idMision);
 
-        // Destruir el tapabocas
+        // ✅ Destruir el objeto
         Destroy(other.gameObject);
     }
 }

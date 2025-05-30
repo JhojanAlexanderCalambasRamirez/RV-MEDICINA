@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -15,8 +13,15 @@ public class NewBehaviourScript : MonoBehaviour
     public AudioSource audioSource;
     public AudioClip sonidoCheck;
 
+    [Header("Progreso de misiones")]
+    [Tooltip("Solo se permite completar la misión si coincide con este número.")]
+    [HideInInspector]
+    public int misionActual = 1;
+
     public void CompletarTarea(int id)
     {
+        if (id != misionActual) return; // Evita completar misiones fuera de orden
+
         switch (id)
         {
             case 1: tarea1Accesorios.isOn = true; break;
@@ -30,5 +35,7 @@ public class NewBehaviourScript : MonoBehaviour
         {
             audioSource.PlayOneShot(sonidoCheck);
         }
+
+        misionActual++; // Avanzar a la siguiente misión
     }
 }

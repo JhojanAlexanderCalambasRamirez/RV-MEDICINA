@@ -21,6 +21,13 @@ public class ColocarGuantes : MonoBehaviour
 
     void OnGuantesAgarrados(SelectEnterEventArgs args)
     {
+        // Validar si es la misión actual
+        if (panelMisiones == null || panelMisiones.misionActual != idMision)
+        {
+            Debug.Log("⛔ No puedes usar los guantes aún.");
+            return;
+        }
+
         // Cambiar material de las manos
         if (manoIzquierdaRenderer != null)
             manoIzquierdaRenderer.material = materialGuantes;
@@ -28,12 +35,11 @@ public class ColocarGuantes : MonoBehaviour
         if (manoDerechaRenderer != null)
             manoDerechaRenderer.material = materialGuantes;
 
-        // Ocultar guantes
+        // Ocultar guantes del mundo
         gameObject.SetActive(false);
 
-        // Marcar la tarea completada
-        if (panelMisiones != null)
-            panelMisiones.CompletarTarea(idMision);
+        // Marcar la tarea como completada
+        panelMisiones.CompletarTarea(idMision);
 
         Debug.Log("✅ ¡Misión 4 completada: Guantes puestos!");
     }
