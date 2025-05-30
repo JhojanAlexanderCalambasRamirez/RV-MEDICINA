@@ -622,6 +622,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 89692019}
   m_CullTransparentMesh: 1
+--- !u!23 &100381244 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -4408124097540450536, guid: be181d40dc69d4845b8fd931e4ed40e8, type: 3}
+  m_PrefabInstance: {fileID: 176464259}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &114471567 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 493704, guid: 2bb715d5d7333cd4cb60235ee1d6bfc4, type: 3}
@@ -885,6 +890,8 @@ MonoBehaviour:
       tradicionalmente para realizar cortes profundos en procedimientos de amputaci\xF3n.
       Su dise\xF1o permite fuerza y control en cortes extensos."
     audioClip: {fileID: 8300000, guid: f47993c6ac2e2ad4d84fe5fb8a6b0ffb, type: 3}
+  rendererDelObjeto: {fileID: 1042932192}
+  materialContorno: {fileID: 2100000, guid: 99f56d9dbc567144a88ada1748095a58, type: 2}
 --- !u!4 &145751670 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 456670, guid: 69d8c128bceb6394aa69d849207e7dce, type: 3}
@@ -1406,6 +1413,8 @@ MonoBehaviour:
       Su dise\xF1o permite adaptarse al cuerpo del paciente y facilita el manejo
       durante la intervenci\xF3n."
     audioClip: {fileID: 8300000, guid: fbf931f31f3f3d4489a93d17af3c2cab, type: 3}
+  rendererDelObjeto: {fileID: 882294467}
+  materialContorno: {fileID: 2100000, guid: 99f56d9dbc567144a88ada1748095a58, type: 2}
 --- !u!114 &176464273
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1424,6 +1433,8 @@ MonoBehaviour:
       limpiar zonas del campo operatorio o absorber fluidos. Su forma alargada y
       sujeci\xF3n firme permiten un uso preciso sin comprometer la esterilidad."
     audioClip: {fileID: 8300000, guid: f884d0c40272c644aa330da56f394db8, type: 3}
+  rendererDelObjeto: {fileID: 882294469}
+  materialContorno: {fileID: 2100000, guid: 99f56d9dbc567144a88ada1748095a58, type: 2}
 --- !u!114 &176464274
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1440,6 +1451,8 @@ MonoBehaviour:
     nombre: 
     descripcion: 
     audioClip: {fileID: 0}
+  rendererDelObjeto: {fileID: 0}
+  materialContorno: {fileID: 0}
 --- !u!114 &176464275
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1459,6 +1472,8 @@ MonoBehaviour:
       agarre es lisa, lo que la hace ideal para manipular estructuras sensibles durante
       la cirug\xEDa."
     audioClip: {fileID: 8300000, guid: 3f88330f4a0bd484ca44bc0fcc9a6660, type: 3}
+  rendererDelObjeto: {fileID: 1443298056}
+  materialContorno: {fileID: 2100000, guid: 99f56d9dbc567144a88ada1748095a58, type: 2}
 --- !u!114 &176464276
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1477,6 +1492,8 @@ MonoBehaviour:
       corporales, hilos de sutura u otros materiales durante una cirug\xEDa. Puede
       tener puntas rectas o curvas, y su filo permite cortes precisos y controlados."
     audioClip: {fileID: 8300000, guid: 83a5932655cf6ea4192f89158c637922, type: 3}
+  rendererDelObjeto: {fileID: 882294471}
+  materialContorno: {fileID: 2100000, guid: 99f56d9dbc567144a88ada1748095a58, type: 2}
 --- !u!1 &185311339
 GameObject:
   m_ObjectHideFlags: 0
@@ -2453,6 +2470,8 @@ MonoBehaviour:
     nombre: 
     descripcion: 
     audioClip: {fileID: 0}
+  rendererDelObjeto: {fileID: 0}
+  materialContorno: {fileID: 0}
 --- !u!1 &304628126
 GameObject:
   m_ObjectHideFlags: 0
@@ -5759,6 +5778,8 @@ MonoBehaviour:
       la sutura de tejidos en procedimientos quir\xFArgicos. Su dise\xF1o permite
       precisi\xF3n y control al momento de coser heridas o incisiones con hilo quir\xFArgico.\n\n"
     audioClip: {fileID: 8300000, guid: 885bb2fe52a9c9b4aa95e50e50b00418, type: 3}
+  rendererDelObjeto: {fileID: 100381244}
+  materialContorno: {fileID: 2100000, guid: 99f56d9dbc567144a88ada1748095a58, type: 2}
 --- !u!1001 &721999533
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7450,6 +7471,21 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1102640297416220895, guid: be181d40dc69d4845b8fd931e4ed40e8, type: 3}
   m_PrefabInstance: {fileID: 176464259}
   m_PrefabAsset: {fileID: 0}
+--- !u!23 &882294467 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -5368553391471518159, guid: be181d40dc69d4845b8fd931e4ed40e8, type: 3}
+  m_PrefabInstance: {fileID: 176464259}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &882294469 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -4970291332782523421, guid: be181d40dc69d4845b8fd931e4ed40e8, type: 3}
+  m_PrefabInstance: {fileID: 176464259}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &882294471 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 1512191506632812556, guid: be181d40dc69d4845b8fd931e4ed40e8, type: 3}
+  m_PrefabInstance: {fileID: 176464259}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &882730797
 GameObject:
   m_ObjectHideFlags: 0
@@ -7608,6 +7644,13 @@ MonoBehaviour:
       jeringas o material quir\xFArgico usado. Es de uso obligatorio para evitar
       riesgos de infecci\xF3n y contaminaci\xF3n."
     audioClip: {fileID: 8300000, guid: e912a4e6dbf27404c8dea50c6b3d57ad, type: 3}
+  rendererDelObjeto: {fileID: 885622165}
+  materialContorno: {fileID: 2100000, guid: 99f56d9dbc567144a88ada1748095a58, type: 2}
+--- !u!23 &885622165 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 2332244, guid: 6b2098cbc1fd4384da8ca063c3d4eb24, type: 3}
+  m_PrefabInstance: {fileID: 873063374}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &889364541
 GameObject:
   m_ObjectHideFlags: 0
@@ -9123,6 +9166,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1041713614}
   m_CullTransparentMesh: 1
+--- !u!23 &1042932192 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -5525669544971987592, guid: be181d40dc69d4845b8fd931e4ed40e8, type: 3}
+  m_PrefabInstance: {fileID: 176464259}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1060593784 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 458662, guid: facf14ae9ce68b7479827bcf72fba835, type: 3}
@@ -10001,6 +10049,13 @@ MonoBehaviour:
       arterial, saturaci\xF3n de ox\xEDgeno y frecuencia respiratoria. Es fundamental
       para el seguimiento continuo del estado cl\xEDnico durante procedimientos quir\xFArgicos."
     audioClip: {fileID: 8300000, guid: b1663fba6091bb840b9c8cec63830e74, type: 3}
+  rendererDelObjeto: {fileID: 1157975329}
+  materialContorno: {fileID: 2100000, guid: 99f56d9dbc567144a88ada1748095a58, type: 2}
+--- !u!23 &1157975329 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 84c4ac9f9ae4b17479b0aeea5f2cf22d, type: 3}
+  m_PrefabInstance: {fileID: 1157975325}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1158404843 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 414482, guid: 725159f8098f5a441afc3603e317460c, type: 3}
@@ -11128,32 +11183,8 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 104228, guid: 8cdaaac046ad650478307f51f1f7886e, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1292977668}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8cdaaac046ad650478307f51f1f7886e, type: 3}
---- !u!1 &1292977667 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 104228, guid: 8cdaaac046ad650478307f51f1f7886e, type: 3}
-  m_PrefabInstance: {fileID: 1292977666}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1292977668
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1292977667}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a37be9ad716c2a47b6bf90c93785876, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  info:
-    nombre: 
-    descripcion: 
-    audioClip: {fileID: 0}
 --- !u!1 &1306341030
 GameObject:
   m_ObjectHideFlags: 0
@@ -12100,6 +12131,13 @@ MonoBehaviour:
       en la piel y tejidos durante una cirug\xEDa. Est\xE1 compuesto por un mango
       reutilizable y una hoja afilada desechable."
     audioClip: {fileID: 8300000, guid: d9dd8b2b3c6893c4f93d14f31e59efcd, type: 3}
+  rendererDelObjeto: {fileID: 1410753573}
+  materialContorno: {fileID: 2100000, guid: 99f56d9dbc567144a88ada1748095a58, type: 2}
+--- !u!23 &1410753573 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 146880450286945535, guid: be181d40dc69d4845b8fd931e4ed40e8, type: 3}
+  m_PrefabInstance: {fileID: 176464259}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1413866594
 GameObject:
   m_ObjectHideFlags: 0
@@ -12589,6 +12627,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 403928, guid: 947e113398f058643a47464fff50cae1, type: 3}
   m_PrefabInstance: {fileID: 1442484232}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &1443298056 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 945454400225530728, guid: be181d40dc69d4845b8fd931e4ed40e8, type: 3}
+  m_PrefabInstance: {fileID: 176464259}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1445832965
 GameObject:
@@ -13543,6 +13586,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 81a13164ce9071c4f9ac44cf10d90a53, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1507271375}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 81a13164ce9071c4f9ac44cf10d90a53, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1507271376}
   m_SourcePrefab: {fileID: 100100000, guid: 81a13164ce9071c4f9ac44cf10d90a53, type: 3}
 --- !u!4 &1507271373 stripped
 Transform:
@@ -13573,6 +13619,50 @@ MonoBehaviour:
       anest\xE9sicos, asegurando que el paciente permanezca inconsciente y sin dolor
       durante el procedimiento."
     audioClip: {fileID: 8300000, guid: 4cc4ca58b7d8ed24e84116ec480940ed, type: 3}
+  rendererDelObjeto: {fileID: 1507271376}
+  materialContorno: {fileID: 2100000, guid: 99f56d9dbc567144a88ada1748095a58, type: 2}
+--- !u!23 &1507271376
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1507271374}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 7770318624900243041, guid: 81a13164ce9071c4f9ac44cf10d90a53, type: 3}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!4 &1528982469 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 458662, guid: facf14ae9ce68b7479827bcf72fba835, type: 3}
@@ -14378,37 +14468,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 104228, guid: 8cdaaac046ad650478307f51f1f7886e, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1649389794}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8cdaaac046ad650478307f51f1f7886e, type: 3}
 --- !u!4 &1649389792 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 427026, guid: 8cdaaac046ad650478307f51f1f7886e, type: 3}
   m_PrefabInstance: {fileID: 1649389791}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1649389793 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 104228, guid: 8cdaaac046ad650478307f51f1f7886e, type: 3}
-  m_PrefabInstance: {fileID: 1649389791}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1649389794
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1649389793}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a37be9ad716c2a47b6bf90c93785876, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  info:
-    nombre: 
-    descripcion: 
-    audioClip: {fileID: 0}
 --- !u!1 &1649757713
 GameObject:
   m_ObjectHideFlags: 0
@@ -14706,6 +14772,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: acc68d3e61e203c4c930188168ea7a18, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1685178006}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: acc68d3e61e203c4c930188168ea7a18, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1685178007}
   m_SourcePrefab: {fileID: 100100000, guid: acc68d3e61e203c4c930188168ea7a18, type: 3}
 --- !u!4 &1685178004 stripped
 Transform:
@@ -14736,6 +14805,50 @@ MonoBehaviour:
       permite ajustar la direcci\xF3n y enfoque para optimizar la visibilidad durante
       procedimientos m\xE9dicos."
     audioClip: {fileID: 8300000, guid: 4508e0bbb01012d42b900df589c85613, type: 3}
+  rendererDelObjeto: {fileID: 1685178007}
+  materialContorno: {fileID: 2100000, guid: 99f56d9dbc567144a88ada1748095a58, type: 2}
+--- !u!23 &1685178007
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1685178005}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: effd1beea691e2a4584e63584871a66f, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &1690223997
 GameObject:
   m_ObjectHideFlags: 0
@@ -15662,6 +15775,13 @@ MonoBehaviour:
       para apoyar instrumentos, bandejas o materiales m\xE9dicos durante procedimientos
       quir\xFArgicos. Su material facilita la limpieza y evita la contaminaci\xF3n."
     audioClip: {fileID: 8300000, guid: 1d2dd6af89c3f0b4fbe1380ff611965c, type: 3}
+  rendererDelObjeto: {fileID: 1763812106}
+  materialContorno: {fileID: 2100000, guid: 99f56d9dbc567144a88ada1748095a58, type: 2}
+--- !u!23 &1763812106 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 2344032, guid: 16ad736c6eda94c449cc0b04719b3c66, type: 3}
+  m_PrefabInstance: {fileID: 822512969}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1772514301
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16956,6 +17076,13 @@ MonoBehaviour:
       de cierre y un dise\xF1o curvo o recto que facilita su manipulaci\xF3n en espacios
       reducidos."
     audioClip: {fileID: 8300000, guid: 017842a6c91d16e43a7df799935689bb, type: 3}
+  rendererDelObjeto: {fileID: 1875720654}
+  materialContorno: {fileID: 2100000, guid: 99f56d9dbc567144a88ada1748095a58, type: 2}
+--- !u!23 &1875720654 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -6636109660245523497, guid: be181d40dc69d4845b8fd931e4ed40e8, type: 3}
+  m_PrefabInstance: {fileID: 176464259}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1881669431 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 460678, guid: 79646652f63865f4185986c750a93b72, type: 3}
@@ -19134,6 +19261,13 @@ MonoBehaviour:
       paciente en tiempo real, siendo crucial para detectar arritmias o alteraciones
       card\xEDacas durante procedimientos m\xE9dicos."
     audioClip: {fileID: 8300000, guid: f13e1b57d6dc32f4dbd5d39bf4a34fac, type: 3}
+  rendererDelObjeto: {fileID: 1995447596}
+  materialContorno: {fileID: 2100000, guid: 99f56d9dbc567144a88ada1748095a58, type: 2}
+--- !u!23 &1995447596 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 1431b64eee9bd6d489e2ac8a1bb23098, type: 3}
+  m_PrefabInstance: {fileID: 1995447592}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1997620075
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19508,6 +19642,13 @@ MonoBehaviour:
       Permite una mejor visibilidad y acceso a la zona a intervenir, sin necesidad
       de asistencia adicional."
     audioClip: {fileID: 8300000, guid: af35218fedd33f74f98e7dc883db8d34, type: 3}
+  rendererDelObjeto: {fileID: 2081913370}
+  materialContorno: {fileID: 2100000, guid: 99f56d9dbc567144a88ada1748095a58, type: 2}
+--- !u!23 &2081913370 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -3779331573580631309, guid: be181d40dc69d4845b8fd931e4ed40e8, type: 3}
+  m_PrefabInstance: {fileID: 176464259}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2086732976
 GameObject:
   m_ObjectHideFlags: 0
@@ -19876,6 +20017,13 @@ MonoBehaviour:
       soporte ergon\xF3mico y facilita la atenci\xF3n en entornos hospitalarios y
       quir\xF3fanos."
     audioClip: {fileID: 8300000, guid: 1d37ea1da11f3d5489677fbb855c31bb, type: 3}
+  rendererDelObjeto: {fileID: 2106769937}
+  materialContorno: {fileID: 2100000, guid: 99f56d9dbc567144a88ada1748095a58, type: 2}
+--- !u!23 &2106769937 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 8630640014679753230, guid: 2a3b3a882d9cfc74392ec24693855ae8, type: 3}
+  m_PrefabInstance: {fileID: 1290058709}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2107976600
 PrefabInstance:
   m_ObjectHideFlags: 0
