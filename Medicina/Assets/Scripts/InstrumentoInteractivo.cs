@@ -1,18 +1,19 @@
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class InstrumentoInteractivo : MonoBehaviour
 {
     [Header("Datos del instrumento")]
     public InfoInstrumento info;
 
-    [Header("Contorno")]
+    [Header("Contorno visual")]
     public Renderer rendererDelObjeto;
     public Material materialContorno;
     private Material[] materialesOriginales;
 
-    [Header("Referencias UI individuales")]
+    [Header("UI Propia del Instrumento")]
     public GameObject canvasInfo;
     public TextMeshProUGUI textoTitulo;
     public TextMeshProUGUI textoDescripcion;
@@ -23,19 +24,14 @@ public class InstrumentoInteractivo : MonoBehaviour
 
     private void Start()
     {
-#if UNITY_EDITOR
-        if (GetComponent<Collider>() == null)
-        {
-            gameObject.AddComponent<BoxCollider>();
-        }
-#endif
-
+        // Backup materiales
         if (rendererDelObjeto == null)
             rendererDelObjeto = GetComponent<Renderer>();
 
         if (rendererDelObjeto != null)
             materialesOriginales = rendererDelObjeto.materials;
 
+        // Eventos UI
         if (botonAudio != null)
             botonAudio.onClick.AddListener(ReproducirAudio);
 
@@ -45,20 +41,24 @@ public class InstrumentoInteractivo : MonoBehaviour
         audioActual = info.audioClip;
     }
 
+    public void OnSeleccionXR(BaseInteractionEventArgs args)
+    {
+        ActivarInfo();
+    }
+
     public void ActivarInfo()
     {
-        // Ocultar los demás canvas
-        DesactivarOtrosCanvas();
+        OcultarTodosLosCanvas();
 
-        // Mostrar info en el canvas propio
         if (canvasInfo != null)
         {
             textoTitulo.text = info.nombre;
             textoDescripcion.text = info.descripcion;
 
-            // Orientación hacia la cámara (solo eje Y)
-            Vector3 direccionSoloY = new Vector3(Camera.main.transform.position.x, canvasInfo.transform.position.y, Camera.main.transform.position.z);
-            canvasInfo.transform.LookAt(direccionSoloY);
+            // Coloca el canvas mirando al jugador
+            Vector3 objetivo = Camera.main.transform.position;
+            Vector3 direccion = new Vector3(objetivo.x, canvasInfo.transform.position.y, objetivo.z);
+            canvasInfo.transform.LookAt(direccion);
             canvasInfo.transform.Rotate(0, 180, 0);
 
             canvasInfo.SetActive(true);
@@ -94,25 +94,16 @@ public class InstrumentoInteractivo : MonoBehaviour
         }
     }
 
-    private void DesactivarOtrosCanvas()
+    private void OcultarTodosLosCanvas()
     {
         InstrumentoInteractivo[] todos = FindObjectsOfType<InstrumentoInteractivo>();
         foreach (var instrumento in todos)
         {
-            if (instrumento != this)
+            if (instrumento != this && instrumento.canvasInfo != null)
             {
-                if (instrumento.canvasInfo != null)
-                    instrumento.canvasInfo.SetActive(false);
-
+                instrumento.canvasInfo.SetActive(false);
                 instrumento.MostrarContorno(false);
             }
         }
     }
-
-#if UNITY_EDITOR
-    private void OnMouseDown()
-    {
-        ActivarInfo();
-    }
-#endif
 }

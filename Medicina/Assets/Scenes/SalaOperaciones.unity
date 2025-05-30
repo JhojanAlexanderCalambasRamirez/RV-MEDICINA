@@ -321,6 +321,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XR Device Simulator Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 2322149156251990186, guid: ed7a6c9adc7f28845a270cd78c7c50e0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
