@@ -888,7 +888,7 @@ MonoBehaviour:
     descripcion: "Instrumento quir\xFArgico robusto con hoja grande y curva, utilizado
       tradicionalmente para realizar cortes profundos en procedimientos de amputaci\xF3n.
       Su dise\xF1o permite fuerza y control en cortes extensos."
-    audioClip: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: f47993c6ac2e2ad4d84fe5fb8a6b0ffb, type: 3}
 --- !u!4 &145751670 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 456670, guid: 69d8c128bceb6394aa69d849207e7dce, type: 3}
@@ -1158,6 +1158,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -0.135
       objectReference: {fileID: 0}
+    - target: {fileID: -5585283099872199094, guid: be181d40dc69d4845b8fd931e4ed40e8, type: 3}
+      propertyPath: m_Name
+      value: Pinza Kelly
+      objectReference: {fileID: 0}
     - target: {fileID: -4641308598137605457, guid: be181d40dc69d4845b8fd931e4ed40e8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1405,7 +1409,7 @@ MonoBehaviour:
       m\xE9dicos para recoger residuos, fluidos corporales, gasas usadas o instrumentos.
       Su dise\xF1o permite adaptarse al cuerpo del paciente y facilita el manejo
       durante la intervenci\xF3n."
-    audioClip: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: fbf931f31f3f3d4489a93d17af3c2cab, type: 3}
 --- !u!114 &176464273
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1423,7 +1427,7 @@ MonoBehaviour:
     descripcion: "Instrumento quir\xFArgico dise\xF1ado para sostener gasas est\xE9riles,
       limpiar zonas del campo operatorio o absorber fluidos. Su forma alargada y
       sujeci\xF3n firme permiten un uso preciso sin comprometer la esterilidad."
-    audioClip: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: f884d0c40272c644aa330da56f394db8, type: 3}
 --- !u!114 &176464274
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1458,7 +1462,7 @@ MonoBehaviour:
       sin causar da\xF1o. A diferencia de las pinzas con dientes, su superficie de
       agarre es lisa, lo que la hace ideal para manipular estructuras sensibles durante
       la cirug\xEDa."
-    audioClip: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: 3f88330f4a0bd484ca44bc0fcc9a6660, type: 3}
 --- !u!114 &176464276
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1476,7 +1480,7 @@ MonoBehaviour:
     descripcion: "Instrumento quir\xFArgico robusto utilizado para cortar tejidos
       corporales, hilos de sutura u otros materiales durante una cirug\xEDa. Puede
       tener puntas rectas o curvas, y su filo permite cortes precisos y controlados."
-    audioClip: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: 83a5932655cf6ea4192f89158c637922, type: 3}
 --- !u!1 &185311339
 GameObject:
   m_ObjectHideFlags: 0
@@ -5630,7 +5634,7 @@ MonoBehaviour:
     descripcion: "Instrumento utilizado para sujetar firmemente la aguja durante
       la sutura de tejidos en procedimientos quir\xFArgicos. Su dise\xF1o permite
       precisi\xF3n y control al momento de coser heridas o incisiones con hilo quir\xFArgico.\n\n"
-    audioClip: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: 885bb2fe52a9c9b4aa95e50e50b00418, type: 3}
 --- !u!1001 &721999533
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6611,6 +6615,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 335521267}
     m_Modifications:
+    - target: {fileID: 141778, guid: 16ad736c6eda94c449cc0b04719b3c66, type: 3}
+      propertyPath: m_Name
+      value: "Mesa de trabajo quir\xFArgica"
+      objectReference: {fileID: 0}
     - target: {fileID: 442108, guid: 16ad736c6eda94c449cc0b04719b3c66, type: 3}
       propertyPath: m_RootOrder
       value: 26
@@ -7202,7 +7210,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 111714, guid: 6b2098cbc1fd4384da8ca063c3d4eb24, type: 3}
       propertyPath: m_Name
-      value: trash_can 1
+      value: "Caneca de residuos biol\xF3gicos"
       objectReference: {fileID: 0}
     - target: {fileID: 490002, guid: 6b2098cbc1fd4384da8ca063c3d4eb24, type: 3}
       propertyPath: m_RootOrder
@@ -7475,7 +7483,7 @@ MonoBehaviour:
       que pueden estar contaminados con agentes infecciosos, como guantes, gasas,
       jeringas o material quir\xFArgico usado. Es de uso obligatorio para evitar
       riesgos de infecci\xF3n y contaminaci\xF3n."
-    audioClip: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: e912a4e6dbf27404c8dea50c6b3d57ad, type: 3}
 --- !u!1 &889364541
 GameObject:
   m_ObjectHideFlags: 0
@@ -9868,7 +9876,7 @@ MonoBehaviour:
       par\xE1metros esenciales del paciente como la frecuencia card\xEDaca, presi\xF3n
       arterial, saturaci\xF3n de ox\xEDgeno y frecuencia respiratoria. Es fundamental
       para el seguimiento continuo del estado cl\xEDnico durante procedimientos quir\xFArgicos."
-    audioClip: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: b1663fba6091bb840b9c8cec63830e74, type: 3}
 --- !u!4 &1158404843 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 414482, guid: 725159f8098f5a441afc3603e317460c, type: 3}
@@ -12032,7 +12040,7 @@ MonoBehaviour:
     descripcion: "Instrumento de corte utilizado para realizar incisiones precisas
       en la piel y tejidos durante una cirug\xEDa. Est\xE1 compuesto por un mango
       reutilizable y una hoja afilada desechable."
-    audioClip: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: d9dd8b2b3c6893c4f93d14f31e59efcd, type: 3}
 --- !u!1 &1413866594
 GameObject:
   m_ObjectHideFlags: 0
@@ -13464,7 +13472,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 81a13164ce9071c4f9ac44cf10d90a53, type: 3}
       propertyPath: m_Name
-      value: anesthesia machine
+      value: "M\xE1quina de anestesia"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13505,7 +13513,7 @@ MonoBehaviour:
       durante una intervenci\xF3n quir\xFArgica. Controla y mezcla ox\xEDgeno y agentes
       anest\xE9sicos, asegurando que el paciente permanezca inconsciente y sin dolor
       durante el procedimiento."
-    audioClip: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: 4cc4ca58b7d8ed24e84116ec480940ed, type: 3}
 --- !u!4 &1528982469 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 458662, guid: facf14ae9ce68b7479827bcf72fba835, type: 3}
@@ -14627,7 +14635,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: acc68d3e61e203c4c930188168ea7a18, type: 3}
       propertyPath: m_Name
-      value: Surgical_Light
+      value: "L\xE1mpara quir\xFArgica"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14668,7 +14676,7 @@ MonoBehaviour:
       luz intensa, clara y sin sombras sobre el \xE1rea quir\xFArgica. Su dise\xF1o
       permite ajustar la direcci\xF3n y enfoque para optimizar la visibilidad durante
       procedimientos m\xE9dicos."
-    audioClip: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: 4508e0bbb01012d42b900df589c85613, type: 3}
 --- !u!1 &1690223997
 GameObject:
   m_ObjectHideFlags: 0
@@ -15594,7 +15602,7 @@ MonoBehaviour:
     descripcion: "Superficie plana y resistente hecha de acero inoxidable, utilizada
       para apoyar instrumentos, bandejas o materiales m\xE9dicos durante procedimientos
       quir\xFArgicos. Su material facilita la limpieza y evita la contaminaci\xF3n."
-    audioClip: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: 1d2dd6af89c3f0b4fbe1380ff611965c, type: 3}
 --- !u!1001 &1772514301
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16889,7 +16897,7 @@ MonoBehaviour:
       tejidos y vasos sangu\xEDneos durante una intervenci\xF3n. Posee un mecanismo
       de cierre y un dise\xF1o curvo o recto que facilita su manipulaci\xF3n en espacios
       reducidos."
-    audioClip: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: 017842a6c91d16e43a7df799935689bb, type: 3}
 --- !u!4 &1881669431 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 460678, guid: 79646652f63865f4185986c750a93b72, type: 3}
@@ -19026,7 +19034,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 1431b64eee9bd6d489e2ac8a1bb23098, type: 3}
       propertyPath: m_Name
-      value: sketchfab
+      value: Monitor de ECG
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -19067,7 +19075,7 @@ MonoBehaviour:
       del coraz\xF3n. Permite visualizar el ritmo y la frecuencia card\xEDaca del
       paciente en tiempo real, siendo crucial para detectar arritmias o alteraciones
       card\xEDacas durante procedimientos m\xE9dicos."
-    audioClip: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: f13e1b57d6dc32f4dbd5d39bf4a34fac, type: 3}
 --- !u!1001 &1997620075
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19441,7 +19449,7 @@ MonoBehaviour:
       de una incisi\xF3n o los bordes de una herida durante una intervenci\xF3n quir\xFArgica.
       Permite una mejor visibilidad y acceso a la zona a intervenir, sin necesidad
       de asistencia adicional."
-    audioClip: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: af35218fedd33f74f98e7dc883db8d34, type: 3}
 --- !u!1 &2086732976
 GameObject:
   m_ObjectHideFlags: 0
@@ -19809,7 +19817,7 @@ MonoBehaviour:
       al paciente antes, durante o despu\xE9s de procedimientos m\xE9dicos. Brinda
       soporte ergon\xF3mico y facilita la atenci\xF3n en entornos hospitalarios y
       quir\xF3fanos."
-    audioClip: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: 1d37ea1da11f3d5489677fbb855c31bb, type: 3}
 --- !u!1001 &2107976600
 PrefabInstance:
   m_ObjectHideFlags: 0
