@@ -20,6 +20,8 @@ public class SnapAlCajon : MonoBehaviour
             grab.interactionManager.SelectExit(grab.firstInteractorSelecting, grab);
         }
 
+        other.transform.SetParent(null);
+
         // Posicionar en el punto del cajón
         other.transform.position = snapPoint.position;
         other.transform.rotation = snapPoint.rotation;
