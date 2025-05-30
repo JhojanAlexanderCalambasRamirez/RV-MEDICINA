@@ -243,7 +243,7 @@ GameObject:
   m_Component:
   - component: {fileID: 13422432}
   m_Layer: 0
-  m_Name: Objetos-Quirurgicos-Interaccion-------------------
+  m_Name: Objetos-Quirurgicos-Interaccion---------
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -608,6 +608,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2495682752630164323, guid: 4bd609be9ba5e3c45a1967040ce2ab58, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e7b7e19ad6316504eb584d0afdc94636, type: 2}
+    - target: {fileID: 3655955485362205368, guid: 4bd609be9ba5e3c45a1967040ce2ab58, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e7b7e19ad6316504eb584d0afdc94636, type: 2}
     - target: {fileID: 6888044292709580972, guid: 4bd609be9ba5e3c45a1967040ce2ab58, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.44
@@ -657,6 +665,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4bd609be9ba5e3c45a1967040ce2ab58, type: 3}
+--- !u!20 &44804156 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 1195812004986462950, guid: 4bd609be9ba5e3c45a1967040ce2ab58, type: 3}
+  m_PrefabInstance: {fileID: 44804155}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &45074116
 GameObject:
   m_ObjectHideFlags: 0
@@ -1562,11 +1575,6 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!23 &100381244 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: -4408124097540450536, guid: be181d40dc69d4845b8fd931e4ed40e8, type: 3}
-  m_PrefabInstance: {fileID: 176464259}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &105875918 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5993847947337725134, guid: 81a13164ce9071c4f9ac44cf10d90a53, type: 3}
@@ -1794,7 +1802,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 2
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 44804156}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -1963,8 +1971,13 @@ MonoBehaviour:
       tradicionalmente para realizar cortes profundos en procedimientos de amputaci\xF3n.
       Su dise\xF1o permite fuerza y control en cortes extensos."
     audioClip: {fileID: 8300000, guid: f47993c6ac2e2ad4d84fe5fb8a6b0ffb, type: 3}
-  rendererDelObjeto: {fileID: 1042932192}
-  materialContorno: {fileID: 2100000, guid: 99f56d9dbc567144a88ada1748095a58, type: 2}
+  rendererDelObjeto: {fileID: 0}
+  materialContorno: {fileID: 0}
+  canvasInfo: {fileID: 0}
+  textoTitulo: {fileID: 0}
+  textoDescripcion: {fileID: 0}
+  botonAudio: {fileID: 0}
+  audioSource: {fileID: 0}
 --- !u!1 &145031304
 GameObject:
   m_ObjectHideFlags: 0
@@ -3056,8 +3069,13 @@ MonoBehaviour:
       Su dise\xF1o permite adaptarse al cuerpo del paciente y facilita el manejo
       durante la intervenci\xF3n."
     audioClip: {fileID: 8300000, guid: fbf931f31f3f3d4489a93d17af3c2cab, type: 3}
-  rendererDelObjeto: {fileID: 882294467}
-  materialContorno: {fileID: 2100000, guid: 99f56d9dbc567144a88ada1748095a58, type: 2}
+  rendererDelObjeto: {fileID: 0}
+  materialContorno: {fileID: 0}
+  canvasInfo: {fileID: 0}
+  textoTitulo: {fileID: 0}
+  textoDescripcion: {fileID: 0}
+  botonAudio: {fileID: 0}
+  audioSource: {fileID: 0}
 --- !u!114 &176464273
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3076,8 +3094,13 @@ MonoBehaviour:
       limpiar zonas del campo operatorio o absorber fluidos. Su forma alargada y
       sujeci\xF3n firme permiten un uso preciso sin comprometer la esterilidad."
     audioClip: {fileID: 8300000, guid: f884d0c40272c644aa330da56f394db8, type: 3}
-  rendererDelObjeto: {fileID: 882294469}
-  materialContorno: {fileID: 2100000, guid: 99f56d9dbc567144a88ada1748095a58, type: 2}
+  rendererDelObjeto: {fileID: 0}
+  materialContorno: {fileID: 0}
+  canvasInfo: {fileID: 0}
+  textoTitulo: {fileID: 0}
+  textoDescripcion: {fileID: 0}
+  botonAudio: {fileID: 0}
+  audioSource: {fileID: 0}
 --- !u!114 &176464274
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3096,6 +3119,11 @@ MonoBehaviour:
     audioClip: {fileID: 0}
   rendererDelObjeto: {fileID: 0}
   materialContorno: {fileID: 0}
+  canvasInfo: {fileID: 0}
+  textoTitulo: {fileID: 0}
+  textoDescripcion: {fileID: 0}
+  botonAudio: {fileID: 0}
+  audioSource: {fileID: 0}
 --- !u!114 &176464275
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3115,8 +3143,13 @@ MonoBehaviour:
       agarre es lisa, lo que la hace ideal para manipular estructuras sensibles durante
       la cirug\xEDa."
     audioClip: {fileID: 8300000, guid: 3f88330f4a0bd484ca44bc0fcc9a6660, type: 3}
-  rendererDelObjeto: {fileID: 1443298056}
-  materialContorno: {fileID: 2100000, guid: 99f56d9dbc567144a88ada1748095a58, type: 2}
+  rendererDelObjeto: {fileID: 0}
+  materialContorno: {fileID: 0}
+  canvasInfo: {fileID: 0}
+  textoTitulo: {fileID: 0}
+  textoDescripcion: {fileID: 0}
+  botonAudio: {fileID: 0}
+  audioSource: {fileID: 0}
 --- !u!114 &176464276
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3135,8 +3168,13 @@ MonoBehaviour:
       corporales, hilos de sutura u otros materiales durante una cirug\xEDa. Puede
       tener puntas rectas o curvas, y su filo permite cortes precisos y controlados."
     audioClip: {fileID: 8300000, guid: 83a5932655cf6ea4192f89158c637922, type: 3}
-  rendererDelObjeto: {fileID: 882294471}
-  materialContorno: {fileID: 2100000, guid: 99f56d9dbc567144a88ada1748095a58, type: 2}
+  rendererDelObjeto: {fileID: 0}
+  materialContorno: {fileID: 0}
+  canvasInfo: {fileID: 0}
+  textoTitulo: {fileID: 0}
+  textoDescripcion: {fileID: 0}
+  botonAudio: {fileID: 0}
+  audioSource: {fileID: 0}
 --- !u!1 &185311339
 GameObject:
   m_ObjectHideFlags: 0
@@ -4737,6 +4775,11 @@ MonoBehaviour:
     audioClip: {fileID: 0}
   rendererDelObjeto: {fileID: 0}
   materialContorno: {fileID: 0}
+  canvasInfo: {fileID: 0}
+  textoTitulo: {fileID: 0}
+  textoDescripcion: {fileID: 0}
+  botonAudio: {fileID: 0}
+  audioSource: {fileID: 0}
 --- !u!1 &304628126
 GameObject:
   m_ObjectHideFlags: 0
@@ -12527,8 +12570,13 @@ MonoBehaviour:
       la sutura de tejidos en procedimientos quir\xFArgicos. Su dise\xF1o permite
       precisi\xF3n y control al momento de coser heridas o incisiones con hilo quir\xFArgico.\n\n"
     audioClip: {fileID: 8300000, guid: 885bb2fe52a9c9b4aa95e50e50b00418, type: 3}
-  rendererDelObjeto: {fileID: 100381244}
-  materialContorno: {fileID: 2100000, guid: 99f56d9dbc567144a88ada1748095a58, type: 2}
+  rendererDelObjeto: {fileID: 0}
+  materialContorno: {fileID: 0}
+  canvasInfo: {fileID: 0}
+  textoTitulo: {fileID: 0}
+  textoDescripcion: {fileID: 0}
+  botonAudio: {fileID: 0}
+  audioSource: {fileID: 0}
 --- !u!1001 &721999533
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13344,17 +13392,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 764199231}
-  m_LocalRotation: {x: -0, y: -0.9953262, z: -0, w: 0.09657009}
-  m_LocalPosition: {x: 0, y: 0, z: 7.9667015}
+  m_LocalRotation: {x: 0.00000024586907, y: -0.898734, z: 0.0000006891785, w: 0.4384943}
+  m_LocalPosition: {x: 0, y: 0, z: -34.4}
   m_LocalScale: {x: 0.14437, y: 0.14437, z: 0.14437}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1700871749}
   m_Father: {fileID: 2016951312}
-  m_LocalEulerAnglesHint: {x: 0, y: -168.917, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -127.984, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 371.87616, y: 222.4095}
+  m_AnchoredPosition: {x: 344.4, y: 222.4}
   m_SizeDelta: {x: 744.4, y: 443.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &764199233
@@ -13407,7 +13455,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 2
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 44804156}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -15527,21 +15575,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1102640297416220895, guid: be181d40dc69d4845b8fd931e4ed40e8, type: 3}
   m_PrefabInstance: {fileID: 176464259}
   m_PrefabAsset: {fileID: 0}
---- !u!23 &882294467 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: -5368553391471518159, guid: be181d40dc69d4845b8fd931e4ed40e8, type: 3}
-  m_PrefabInstance: {fileID: 176464259}
-  m_PrefabAsset: {fileID: 0}
---- !u!23 &882294469 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: -4970291332782523421, guid: be181d40dc69d4845b8fd931e4ed40e8, type: 3}
-  m_PrefabInstance: {fileID: 176464259}
-  m_PrefabAsset: {fileID: 0}
---- !u!23 &882294471 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 1512191506632812556, guid: be181d40dc69d4845b8fd931e4ed40e8, type: 3}
-  m_PrefabInstance: {fileID: 176464259}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &882730797
 GameObject:
   m_ObjectHideFlags: 0
@@ -15700,13 +15733,13 @@ MonoBehaviour:
       jeringas o material quir\xFArgico usado. Es de uso obligatorio para evitar
       riesgos de infecci\xF3n y contaminaci\xF3n."
     audioClip: {fileID: 8300000, guid: e912a4e6dbf27404c8dea50c6b3d57ad, type: 3}
-  rendererDelObjeto: {fileID: 885622165}
-  materialContorno: {fileID: 2100000, guid: 99f56d9dbc567144a88ada1748095a58, type: 2}
---- !u!23 &885622165 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 2332244, guid: 6b2098cbc1fd4384da8ca063c3d4eb24, type: 3}
-  m_PrefabInstance: {fileID: 873063374}
-  m_PrefabAsset: {fileID: 0}
+  rendererDelObjeto: {fileID: 0}
+  materialContorno: {fileID: 0}
+  canvasInfo: {fileID: 0}
+  textoTitulo: {fileID: 0}
+  textoDescripcion: {fileID: 0}
+  botonAudio: {fileID: 0}
+  audioSource: {fileID: 0}
 --- !u!1 &889364541
 GameObject:
   m_ObjectHideFlags: 0
@@ -17588,6 +17621,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XR Interaction Manager
       objectReference: {fileID: 0}
+    - target: {fileID: 5237365166829610828, guid: 6a11e6c8436443e4287af144c1c77b6f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6465564947582350542, guid: 6a11e6c8436443e4287af144c1c77b6f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.7894034
@@ -18278,11 +18315,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1041713614}
   m_CullTransparentMesh: 1
---- !u!23 &1042932192 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: -5525669544971987592, guid: be181d40dc69d4845b8fd931e4ed40e8, type: 3}
-  m_PrefabInstance: {fileID: 176464259}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1053109319
 GameObject:
   m_ObjectHideFlags: 0
@@ -18970,7 +19002,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 2
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 44804156}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -19913,6 +19945,11 @@ MonoBehaviour:
     audioClip: {fileID: 8300000, guid: b1663fba6091bb840b9c8cec63830e74, type: 3}
   rendererDelObjeto: {fileID: 1157975329}
   materialContorno: {fileID: 2100000, guid: 99f56d9dbc567144a88ada1748095a58, type: 2}
+  canvasInfo: {fileID: 119873057}
+  textoTitulo: {fileID: 851413382}
+  textoDescripcion: {fileID: 1690223999}
+  botonAudio: {fileID: 694100362}
+  audioSource: {fileID: 1492570696}
 --- !u!23 &1157975329 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 84c4ac9f9ae4b17479b0aeea5f2cf22d, type: 3}
@@ -20545,6 +20582,10 @@ PrefabInstance:
     - target: {fileID: 2322149156251990186, guid: ed7a6c9adc7f28845a270cd78c7c50e0, type: 3}
       propertyPath: m_Name
       value: XR Device Simulator Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 2322149156251990186, guid: ed7a6c9adc7f28845a270cd78c7c50e0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -24023,13 +24064,13 @@ MonoBehaviour:
       en la piel y tejidos durante una cirug\xEDa. Est\xE1 compuesto por un mango
       reutilizable y una hoja afilada desechable."
     audioClip: {fileID: 8300000, guid: d9dd8b2b3c6893c4f93d14f31e59efcd, type: 3}
-  rendererDelObjeto: {fileID: 1410753573}
-  materialContorno: {fileID: 2100000, guid: 99f56d9dbc567144a88ada1748095a58, type: 2}
---- !u!23 &1410753573 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 146880450286945535, guid: be181d40dc69d4845b8fd931e4ed40e8, type: 3}
-  m_PrefabInstance: {fileID: 176464259}
-  m_PrefabAsset: {fileID: 0}
+  rendererDelObjeto: {fileID: 0}
+  materialContorno: {fileID: 0}
+  canvasInfo: {fileID: 0}
+  textoTitulo: {fileID: 0}
+  textoDescripcion: {fileID: 0}
+  botonAudio: {fileID: 0}
+  audioSource: {fileID: 0}
 --- !u!1 &1413866594
 GameObject:
   m_ObjectHideFlags: 0
@@ -24645,11 +24686,6 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 403928, guid: 947e113398f058643a47464fff50cae1, type: 3}
   m_PrefabInstance: {fileID: 1442484232}
-  m_PrefabAsset: {fileID: 0}
---- !u!23 &1443298056 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 945454400225530728, guid: be181d40dc69d4845b8fd931e4ed40e8, type: 3}
-  m_PrefabInstance: {fileID: 176464259}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1445832965
 GameObject:
@@ -26044,8 +26080,13 @@ MonoBehaviour:
       anest\xE9sicos, asegurando que el paciente permanezca inconsciente y sin dolor
       durante el procedimiento."
     audioClip: {fileID: 8300000, guid: 4cc4ca58b7d8ed24e84116ec480940ed, type: 3}
-  rendererDelObjeto: {fileID: 0}
+  rendererDelObjeto: {fileID: 1507271376}
   materialContorno: {fileID: 2100000, guid: 99f56d9dbc567144a88ada1748095a58, type: 2}
+  canvasInfo: {fileID: 1104539950}
+  textoTitulo: {fileID: 1156241289}
+  textoDescripcion: {fileID: 710162188}
+  botonAudio: {fileID: 889364543}
+  audioSource: {fileID: 1492570696}
 --- !u!23 &1507271376
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -28122,7 +28163,12 @@ MonoBehaviour:
       procedimientos m\xE9dicos."
     audioClip: {fileID: 8300000, guid: 4508e0bbb01012d42b900df589c85613, type: 3}
   rendererDelObjeto: {fileID: 0}
-  materialContorno: {fileID: 2100000, guid: 99f56d9dbc567144a88ada1748095a58, type: 2}
+  materialContorno: {fileID: 0}
+  canvasInfo: {fileID: 0}
+  textoTitulo: {fileID: 0}
+  textoDescripcion: {fileID: 0}
+  botonAudio: {fileID: 0}
+  audioSource: {fileID: 0}
 --- !u!23 &1685178007
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -29813,13 +29859,13 @@ MonoBehaviour:
       para apoyar instrumentos, bandejas o materiales m\xE9dicos durante procedimientos
       quir\xFArgicos. Su material facilita la limpieza y evita la contaminaci\xF3n."
     audioClip: {fileID: 8300000, guid: 1d2dd6af89c3f0b4fbe1380ff611965c, type: 3}
-  rendererDelObjeto: {fileID: 1763812106}
-  materialContorno: {fileID: 2100000, guid: 99f56d9dbc567144a88ada1748095a58, type: 2}
---- !u!23 &1763812106 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 2344032, guid: 16ad736c6eda94c449cc0b04719b3c66, type: 3}
-  m_PrefabInstance: {fileID: 822512969}
-  m_PrefabAsset: {fileID: 0}
+  rendererDelObjeto: {fileID: 0}
+  materialContorno: {fileID: 0}
+  canvasInfo: {fileID: 0}
+  textoTitulo: {fileID: 0}
+  textoDescripcion: {fileID: 0}
+  botonAudio: {fileID: 0}
+  audioSource: {fileID: 0}
 --- !u!1 &1767076722
 GameObject:
   m_ObjectHideFlags: 0
@@ -31469,13 +31515,13 @@ MonoBehaviour:
       de cierre y un dise\xF1o curvo o recto que facilita su manipulaci\xF3n en espacios
       reducidos."
     audioClip: {fileID: 8300000, guid: 017842a6c91d16e43a7df799935689bb, type: 3}
-  rendererDelObjeto: {fileID: 1875720654}
-  materialContorno: {fileID: 2100000, guid: 99f56d9dbc567144a88ada1748095a58, type: 2}
---- !u!23 &1875720654 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: -6636109660245523497, guid: be181d40dc69d4845b8fd931e4ed40e8, type: 3}
-  m_PrefabInstance: {fileID: 176464259}
-  m_PrefabAsset: {fileID: 0}
+  rendererDelObjeto: {fileID: 0}
+  materialContorno: {fileID: 0}
+  canvasInfo: {fileID: 0}
+  textoTitulo: {fileID: 0}
+  textoDescripcion: {fileID: 0}
+  botonAudio: {fileID: 0}
+  audioSource: {fileID: 0}
 --- !u!4 &1881669431 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 460678, guid: 79646652f63865f4185986c750a93b72, type: 3}
@@ -33478,6 +33524,11 @@ MonoBehaviour:
     audioClip: {fileID: 8300000, guid: f13e1b57d6dc32f4dbd5d39bf4a34fac, type: 3}
   rendererDelObjeto: {fileID: 1995447596}
   materialContorno: {fileID: 2100000, guid: 99f56d9dbc567144a88ada1748095a58, type: 2}
+  canvasInfo: {fileID: 764199231}
+  textoTitulo: {fileID: 1428639826}
+  textoDescripcion: {fileID: 992860570}
+  botonAudio: {fileID: 1649757715}
+  audioSource: {fileID: 1492570696}
 --- !u!23 &1995447596 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 1431b64eee9bd6d489e2ac8a1bb23098, type: 3}
@@ -34383,13 +34434,13 @@ MonoBehaviour:
       Permite una mejor visibilidad y acceso a la zona a intervenir, sin necesidad
       de asistencia adicional."
     audioClip: {fileID: 8300000, guid: af35218fedd33f74f98e7dc883db8d34, type: 3}
-  rendererDelObjeto: {fileID: 2081913370}
-  materialContorno: {fileID: 2100000, guid: 99f56d9dbc567144a88ada1748095a58, type: 2}
---- !u!23 &2081913370 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: -3779331573580631309, guid: be181d40dc69d4845b8fd931e4ed40e8, type: 3}
-  m_PrefabInstance: {fileID: 176464259}
-  m_PrefabAsset: {fileID: 0}
+  rendererDelObjeto: {fileID: 0}
+  materialContorno: {fileID: 0}
+  canvasInfo: {fileID: 0}
+  textoTitulo: {fileID: 0}
+  textoDescripcion: {fileID: 0}
+  botonAudio: {fileID: 0}
+  audioSource: {fileID: 0}
 --- !u!4 &2086032541 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8035857614479882688, guid: 81a13164ce9071c4f9ac44cf10d90a53, type: 3}
@@ -34921,6 +34972,11 @@ MonoBehaviour:
     audioClip: {fileID: 8300000, guid: 1d37ea1da11f3d5489677fbb855c31bb, type: 3}
   rendererDelObjeto: {fileID: 2106769937}
   materialContorno: {fileID: 2100000, guid: 99f56d9dbc567144a88ada1748095a58, type: 2}
+  canvasInfo: {fileID: 422600123}
+  textoTitulo: {fileID: 153280538}
+  textoDescripcion: {fileID: 809724509}
+  botonAudio: {fileID: 2072889646}
+  audioSource: {fileID: 1492570696}
 --- !u!23 &2106769937 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 8630640014679753230, guid: 2a3b3a882d9cfc74392ec24693855ae8, type: 3}

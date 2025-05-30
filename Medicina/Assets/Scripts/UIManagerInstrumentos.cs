@@ -34,8 +34,6 @@ public class UIManagerInstrumentos : MonoBehaviour
         textoDescripcion.text = info.descripcion;
         audioActual = info.audioClip;
 
-        // Posiciona el Canvas flotante frente al instrumento
-        canvasInfo.transform.position = posicion + Vector3.up * 0.25f;
         canvasInfo.transform.LookAt(Camera.main.transform);
         canvasInfo.transform.Rotate(0, 180, 0);
 
