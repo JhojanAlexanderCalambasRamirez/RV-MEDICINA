@@ -8,7 +8,8 @@ public class CajonDetector : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (!tareaCompletada && other.CompareTag("Reloj"))
+        // Verifica si es la misión actual y que no esté ya completada
+        if (!tareaCompletada && panelMisiones.misionActual == idTarea && other.CompareTag("Reloj"))
         {
             tareaCompletada = true;
             panelMisiones.CompletarTarea(idTarea);
