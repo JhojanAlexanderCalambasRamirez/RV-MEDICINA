@@ -18,7 +18,7 @@ public class InstrumentoInteractivo : MonoBehaviour
     public TextMeshProUGUI textoTitulo;
     public TextMeshProUGUI textoDescripcion;
 
-    private bool yaFueVisto = false; // ← esto es clave
+    private bool yaFueVisto = false;
 
     private void Start()
     {

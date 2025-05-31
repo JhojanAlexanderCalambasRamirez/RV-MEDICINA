@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
 
@@ -11,7 +11,7 @@ public class ContadorInstrumentosUI : MonoBehaviour
     public AudioSource audioFinal;
 
     [Header("Cantidad total")]
-    public int totalInstrumentos = 0;
+    [SerializeField] private int totalInstrumentos = 16;
     private int instrumentosVisitados = 0;
     private bool audioYaIniciado = false;
 
