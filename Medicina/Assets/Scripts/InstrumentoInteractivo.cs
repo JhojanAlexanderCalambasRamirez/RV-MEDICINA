@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using UnityEngine.XR.Interaction.Toolkit;
@@ -17,28 +17,19 @@ public class InstrumentoInteractivo : MonoBehaviour
     public GameObject canvasInfo;
     public TextMeshProUGUI textoTitulo;
     public TextMeshProUGUI textoDescripcion;
-    public Button botonAudio;
-    public AudioSource audioSource;
 
-    private AudioClip audioActual;
+    private bool yaFueVisto = false;
 
     private void Start()
     {
-        // Backup materiales
         if (rendererDelObjeto == null)
             rendererDelObjeto = GetComponent<Renderer>();
 
         if (rendererDelObjeto != null)
             materialesOriginales = rendererDelObjeto.materials;
 
-        // Eventos UI
-        if (botonAudio != null)
-            botonAudio.onClick.AddListener(ReproducirAudio);
-
         if (canvasInfo != null)
             canvasInfo.SetActive(false);
-
-        audioActual = info.audioClip;
     }
 
     public void OnSeleccionXR(BaseInteractionEventArgs args)
@@ -55,25 +46,21 @@ public class InstrumentoInteractivo : MonoBehaviour
             textoTitulo.text = info.nombre;
             textoDescripcion.text = info.descripcion;
 
-            // Coloca el canvas mirando al jugador
             Vector3 objetivo = Camera.main.transform.position;
             Vector3 direccion = new Vector3(objetivo.x, canvasInfo.transform.position.y, objetivo.z);
             canvasInfo.transform.LookAt(direccion);
             canvasInfo.transform.Rotate(0, 180, 0);
 
             canvasInfo.SetActive(true);
+
+            if (!yaFueVisto)
+            {
+                yaFueVisto = true;
+                ContadorInstrumentosUI.Instance?.RegistrarInteraccion();
+            }
         }
 
         MostrarContorno(true);
-    }
-
-    private void ReproducirAudio()
-    {
-        if (audioActual != null && audioSource != null)
-        {
-            audioSource.clip = audioActual;
-            audioSource.Play();
-        }
     }
 
     public void MostrarContorno(bool activo)
