@@ -3,51 +3,56 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.XR.Interaction.Toolkit;
 public class SessionManager : MonoBehaviour
 {
     public static SessionManager Instance { get; private set; }
 
-    [Header("Referencias")]
-    public Button playButton;
-    public string gameSceneName = "GameScene";
+    [Header("Referencias VR")]
+    public XRSimpleInteractable playInteractable; // Reemplazo del Button tradicional
+    public Material enabledMaterial; // Material cuando está habilitado
+    public Material disabledMaterial; // Material cuando está deshabilitado
+    public string gameSceneName = "VR_GameScene"; // Escena específica para VR
 
-    [Header("Configuración de Escenas")]
-    public string sceneToLoad = "MainGameScene"; // Nombre exacto de tu escena
+    [Header("Configuración VR")]
+    public float hapticAmplitude = 0.5f;
+    public float hapticDuration = 0.3f;
 
     [HideInInspector]
     public UserAccount currentUser;
     [HideInInspector]
     public bool isLoggedIn = false;
 
+    private Renderer buttonRenderer;
+
     void Awake()
     {
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject);  // Persistencia entre escenas
-
-            // Inicialización
-            isLoggedIn = false;
-            UpdatePlayButtonState();
+            // Aplicar DontDestroyOnLoad al padre raíz
+            DontDestroyOnLoad(transform.root.gameObject);
         }
         else
         {
-            // Destruye cualquier copia accidental
             Destroy(gameObject);
-            return;  // Importante para evitar inicialización duplicada
         }
-
-        UpdatePlayButtonState();
     }
-
+    void InitializeVRComponents()
+    {
+        if (playInteractable != null)
+        {
+            buttonRenderer = playInteractable.GetComponent<Renderer>();
+            playInteractable.selectEntered.AddListener(_ => StartGameVR());
+            UpdatePlayButtonState();
+        }
+    }
     public void Login(UserAccount user)
     {
         currentUser = user;
         isLoggedIn = true;
         UpdatePlayButtonState();
-
-        // Debug para verificar
-        Debug.Log($"Login realizado - Botón Play habilitado: {playButton.interactable}");
+        TriggerHapticFeedback(hapticAmplitude, hapticDuration);
     }
 
     public void Logout()
@@ -57,53 +62,54 @@ public class SessionManager : MonoBehaviour
         UpdatePlayButtonState();
     }
 
-    public void StartGame()
+    public void StartGameVR() // Versión adaptada para VR
     {
         if (!isLoggedIn)
         {
             Debug.LogWarning("Intento de iniciar juego sin sesión activa");
+            TriggerHapticFeedback(0.7f, 0.5f); // Feedback de error más fuerte
             return;
         }
 
-        Debug.Log($"Cargando escena: {sceneToLoad} para usuario: {currentUser.nombre}");
-
-        // Guardar datos antes de cambiar de escena
+        Debug.Log($"Cargando escena VR: {gameSceneName}");
         SaveUserData();
 
-        // Cargar la escena
-        SceneManager.LoadScene(sceneToLoad);
+        // Transición optimizada para VR
+        SceneManager.LoadSceneAsync(gameSceneName, LoadSceneMode.Single);
     }
-
     void UpdatePlayButtonState()
     {
-        if (playButton != null)
+        if (playInteractable != null && buttonRenderer != null)
         {
-            playButton.interactable = isLoggedIn;
+            playInteractable.enabled = isLoggedIn;
 
-            // Opcional: Cambiar color visualmente
-            var colors = playButton.colors;
-            colors.normalColor = isLoggedIn ? Color.green : Color.gray;
-            playButton.colors = colors;
+            // Cambio visual basado en materiales
+            buttonRenderer.material = isLoggedIn ? enabledMaterial : disabledMaterial;
+
+            // Escalado para feedback visual
+            playInteractable.transform.localScale = isLoggedIn ?
+                Vector3.one * 1.05f :
+                Vector3.one * 0.95f;
         }
-        else
-        {
-            Debug.LogWarning("PlayButton no asignado en SessionManager");
-        }
+    }
+    void TriggerHapticFeedback(float amplitude, float duration)
+    {
+        // Implementación específica según SDK VR
+        // Ejemplo para Oculus:
+        // OVRInput.SetControllerVibration(1, amplitude, OVRInput.Controller.RTouch);
+        // Invoke(nameof(StopHaptics), duration);
+    }
+
+    void StopHaptics()
+    {
+        // OVRInput.SetControllerVibration(0, 0, OVRInput.Controller.RTouch);
     }
 
     void SaveUserData()
     {
-        // Verificación segura de AccountManager
         if (AccountManager.Instance != null)
         {
             AccountManager.Instance.SaveAccounts();
-            Debug.Log("Datos del usuario guardados correctamente");
-        }
-        else
-        {
-            Debug.LogError("AccountManager no está disponible");
-            // Opcional: Cargar AccountManager manualmente si es necesario
-            // AccountManager.Instance = FindObjectOfType<AccountManager>();
         }
     }
 }

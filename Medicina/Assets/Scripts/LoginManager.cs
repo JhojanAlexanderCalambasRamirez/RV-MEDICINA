@@ -4,15 +4,20 @@ using UnityEngine;
 using TMPro;
 using System.IO;
 using System;
+using UnityEngine.XR.Interaction.Toolkit.UI;
 public class LoginManager : MonoBehaviour
 {
-    [Header("Referencias UI")]
+    [Header("Referencias VR")]
     public TMP_InputField usuarioInput;
     public TMP_InputField contrasenaInput;
     public TMP_Text txtFeedbackLogin;
+    public XRUIInputModule vrInputModule;
+    public Canvas vrCanvas;
 
-    [Header("Configuración")]
-    public float feedbackDuration = 2.5f;
+    [Header("Configuración VR")]
+    public float feedbackDuration = 3f; // Aumentado para mejor legibilidad en VR
+    public float uiDistance = 2.5f;
+    public Vector3 uiOffset = new Vector3(0, -0.2f, 0);
 
     private string dataPath;
     private AccountDatabase accountDatabase;
@@ -21,64 +26,96 @@ public class LoginManager : MonoBehaviour
     void Awake()
     {
         dataPath = Path.Combine(Application.persistentDataPath, "accounts.json");
+        ConfigureVRUI();
         ClearFeedback();
     }
 
+    void ConfigureVRUI()
+    {
+        if (vrCanvas != null)
+        {
+            vrCanvas.worldCamera = Camera.main;
+            vrCanvas.planeDistance = uiDistance;
+
+            // Posicionamiento relativo al jugador
+            vrCanvas.transform.position = Camera.main.transform.position +
+                                       Camera.main.transform.forward * uiDistance +
+                                       uiOffset;
+            vrCanvas.transform.rotation = Quaternion.LookRotation(
+                vrCanvas.transform.position - Camera.main.transform.position);
+        }
+    }
     public void AttemptLogin()
     {
-        string usuario = usuarioInput.text.Trim();
-        string contrasena = contrasenaInput.text;
-
-        // Validación básica
-        if (string.IsNullOrEmpty(usuario))
+        if (string.IsNullOrEmpty(usuarioInput.text))
         {
-            ShowFeedback("Ingrese su correo o código", Color.red);
+            ShowFeedback("<b>Error:</b> Ingrese su correo o código", Color.red);
+            TriggerHapticFeedback(0.5f, 0.2f);
             return;
         }
 
-        if (string.IsNullOrEmpty(contrasena))
+        if (string.IsNullOrEmpty(contrasenaInput.text))
         {
-            ShowFeedback("Ingrese su contraseña", Color.red);
+            ShowFeedback("<b>Error:</b> Ingrese su contraseña", Color.red);
+            TriggerHapticFeedback(0.5f, 0.2f);
             return;
         }
-
 
         UserAccount account = FindAccount(usuarioInput.text, contrasenaInput.text);
 
         if (account != null)
         {
-            ShowFeedback($"¡Bienvenido, {account.nombre}!", Color.green);
+            ShowFeedback($"<color=green>¡Bienvenido, {account.nombre}!</color>", Color.green);
+            TriggerHapticFeedback(0.7f, 0.5f); // Feedback positivo más largo
 
-            // Notificar al SessionManager y habilitar el botón
             SessionManager.Instance.Login(account);
 
-            // Limpiar campos y volver al menú
-            usuarioInput.text = "";
-            contrasenaInput.text = "";
-            FindObjectOfType<MenuManager>().ShowMainMenu();
+            // Transición optimizada para VR
+            StartCoroutine(CompleteLoginProcess(account));
         }
         else
         {
-            ShowFeedback("Credenciales incorrectas", Color.red);
+            ShowFeedback("<b>Error:</b> Credenciales incorrectas", Color.red);
+            TriggerHapticFeedback(0.5f, 0.3f);
             contrasenaInput.text = "";
         }
+    }
+
+    IEnumerator CompleteLoginProcess(UserAccount account)
+    {
+        yield return new WaitForSeconds(1.5f); // Tiempo para leer el mensaje
+        usuarioInput.text = "";
+        contrasenaInput.text = "";
+
+        if (MenuManager.Instance != null)
+        {
+            MenuManager.Instance.ShowMainMenu();
+        }
+    }
+    void TriggerHapticFeedback(float amplitude, float duration)
+    {
+        // Implementar según el SDK de VR (Oculus, OpenXR, etc.)
+        // Ejemplo para Oculus:
+        // OVRInput.SetControllerVibration(1, amplitude, OVRInput.Controller.RTouch);
+        // Invoke("StopHaptics", duration);
+    }
+
+    void StopHaptics()
+    {
+        // OVRInput.SetControllerVibration(0, 0, OVRInput.Controller.RTouch);
     }
 
     void ShowFeedback(string message, Color color)
     {
         if (txtFeedbackLogin != null)
         {
-            // Detener la corrutina anterior si existe
-            if (feedbackCoroutine != null)
-            {
-                StopCoroutine(feedbackCoroutine);
-            }
+            if (feedbackCoroutine != null) StopCoroutine(feedbackCoroutine);
 
             txtFeedbackLogin.text = message;
             txtFeedbackLogin.color = color;
+            txtFeedbackLogin.fontSize = 20; // Tamaño aumentado para VR
             txtFeedbackLogin.gameObject.SetActive(true);
 
-            // Ocultar después de un tiempo
             feedbackCoroutine = StartCoroutine(HideFeedbackAfterDelay());
         }
     }
