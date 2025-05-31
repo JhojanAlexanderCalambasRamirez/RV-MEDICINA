@@ -45,6 +45,6 @@ public class ContadorInstrumentosUI : MonoBehaviour
 
     private void CargarEscenaQuiz()
     {
-        SceneManager.LoadScene("preguntas");
+        SceneManager.LoadScene("Preguntas-Etapa-1-2");
     }
 }

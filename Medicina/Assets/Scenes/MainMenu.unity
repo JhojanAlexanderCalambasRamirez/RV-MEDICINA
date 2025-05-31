@@ -870,7 +870,10 @@ MonoBehaviour:
   codigoInput: {fileID: 1021035408}
   contrasenaInput: {fileID: 1441998301}
   txtFeedbackRegistro: {fileID: 705501509}
+  vrInputModule: {fileID: 0}
   feedbackDuration: 2.5
+  uiDistance: 2
+  uiOffset: {x: 0, y: -0.3, z: 0}
 --- !u!1 &144773476
 GameObject:
   m_ObjectHideFlags: 0
@@ -2227,9 +2230,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dd9e8bb4d0742459e8a5017087eec8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playButton: {fileID: 909258615}
+  playInteractable: {fileID: 0}
+  enabledMaterial: {fileID: 0}
+  disabledMaterial: {fileID: 0}
   gameSceneName: GameScene
-  sceneToLoad: MainGameScene
+  hapticAmplitude: 0.5
+  hapticDuration: 0.3
   currentUser:
     nombre: 
     correo: 
@@ -4557,13 +4563,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f5a3cbc0911f1340ae12bde164e6c08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  loginButton: {fileID: 0}
+  registerButton: {fileID: 0}
+  backButtonLogin: {fileID: 0}
+  backButtonRegister: {fileID: 0}
   mainMenuPanel: {fileID: 1169373482}
   loginPanel: {fileID: 1506939853}
   registerPanel: {fileID: 87334804}
-  loginButton: {fileID: 1857157665}
-  registerButton: {fileID: 820854755}
-  backButtonLogin: {fileID: 780807582}
-  backButtonRegister: {fileID: 1901557339}
+  uiAnchor: {fileID: 0}
+  leftControllerInteractor: {fileID: 0}
+  rightControllerInteractor: {fileID: 0}
+  uiDistance: 2
+  uiHeightOffset: -0.3
+  panelAngle: 15
+  uiPivot: {fileID: 0}
+  defaultDistance: 2
 --- !u!114 &1169373487
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5255,7 +5269,11 @@ MonoBehaviour:
   usuarioInput: {fileID: 1893220708}
   contrasenaInput: {fileID: 1544703254}
   txtFeedbackLogin: {fileID: 1916893650}
+  vrInputModule: {fileID: 0}
+  vrCanvas: {fileID: 0}
   feedbackDuration: 2.5
+  uiDistance: 2.5
+  uiOffset: {x: 0, y: -0.2, z: 0}
 --- !u!1 &1516911832
 GameObject:
   m_ObjectHideFlags: 0
@@ -5717,19 +5735,19 @@ MonoBehaviour:
   m_RepeatRate: 0.1
   m_TrackedDeviceDragThresholdMultiplier: 1.4
   m_TrackedScrollDeltaMultiplier: 5
-  m_ActiveInputMode: 0
+  m_ActiveInputMode: 1
   m_MaxTrackedDeviceRaycastDistance: 1000
   m_EnableXRInput: 1
   m_EnableMouseInput: 1
   m_EnableTouchInput: 1
-  m_PointAction: {fileID: 0}
-  m_LeftClickAction: {fileID: 0}
-  m_MiddleClickAction: {fileID: 0}
-  m_RightClickAction: {fileID: 0}
-  m_ScrollWheelAction: {fileID: 0}
-  m_NavigateAction: {fileID: 0}
-  m_SubmitAction: {fileID: 0}
-  m_CancelAction: {fileID: 0}
+  m_PointAction: {fileID: 2869410428622933342, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  m_LeftClickAction: {fileID: 1855836014308820768, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  m_MiddleClickAction: {fileID: -6289560987278519447, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  m_RightClickAction: {fileID: -2562941478296515153, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  m_ScrollWheelAction: {fileID: 5825226938762934180, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  m_NavigateAction: {fileID: -7967456002180160679, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  m_SubmitAction: {fileID: 3994978066732806534, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  m_CancelAction: {fileID: 2387711382375263438, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   m_EnableBuiltinActionsAsFallback: 1
   m_EnableGamepadInput: 1
   m_EnableJoystickInput: 1
