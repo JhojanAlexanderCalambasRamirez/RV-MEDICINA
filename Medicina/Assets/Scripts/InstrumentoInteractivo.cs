@@ -18,6 +18,9 @@ public class InstrumentoInteractivo : MonoBehaviour
     public TextMeshProUGUI textoTitulo;
     public TextMeshProUGUI textoDescripcion;
 
+    [Header("Feedback de selección")]
+    public AudioSource audioFeedback;
+
     private bool yaFueVisto = false;
 
     private void Start()
@@ -40,6 +43,9 @@ public class InstrumentoInteractivo : MonoBehaviour
     public void ActivarInfo()
     {
         OcultarTodosLosCanvas();
+
+        if (audioFeedback != null)
+            audioFeedback.Play();
 
         if (canvasInfo != null)
         {
