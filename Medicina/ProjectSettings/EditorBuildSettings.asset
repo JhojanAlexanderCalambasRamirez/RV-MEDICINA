@@ -6,10 +6,10 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SalaOperaciones.unity
+    path: Assets/Scenes/SalaOperaciones-Etapa-1.unity
     guid: 35aff1ee3c40d804088136499aed1171
   - enabled: 1
-    path: Assets/Scenes/SalaOperaciones-Etapa2.unity
+    path: Assets/Scenes/SalaOperaciones-Etapa-2.unity
     guid: d9accbdde1611f443a0572bb289214a2
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 341e5c1ebf5e9854bb9991cecbcdd5ae, type: 2}
