@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class ContadorInstrumentosUI : MonoBehaviour
 {
@@ -18,9 +19,15 @@ public class ContadorInstrumentosUI : MonoBehaviour
     private void Awake()
     {
         if (Instance == null)
+        {
             Instance = this;
+            DontDestroyOnLoad(gameObject); // Mantener entre escenas si quieres
+        }
         else
+        {
             Destroy(gameObject);
+            return;
+        }
 
         ActualizarTexto();
     }
@@ -34,7 +41,7 @@ public class ContadorInstrumentosUI : MonoBehaviour
         {
             audioYaIniciado = true;
             audioFinal.Play();
-            Invoke(nameof(CargarEscenaQuiz), audioFinal.clip.length);
+            StartCoroutine(CargarEscenaQuizAsync());
         }
     }
 
@@ -43,8 +50,27 @@ public class ContadorInstrumentosUI : MonoBehaviour
         textoContador.text = $"{instrumentosVisitados}/{totalInstrumentos}";
     }
 
-    private void CargarEscenaQuiz()
+    private IEnumerator CargarEscenaQuizAsync()
     {
-        SceneManager.LoadScene("preguntas");
+        yield return new WaitForSeconds(audioFinal.clip.length);
+
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("Preguntas-Etapa-1-2");
+        asyncLoad.allowSceneActivation = false;
+
+        while (asyncLoad.progress < 0.9f)
+        {
+            // Puedes mostrar asyncLoad.progress aquí para UI
+            yield return null;
+        }
+
+        // Puedes esperar un pequeño delay extra para suavizar la transición si quieres
+        yield return new WaitForSeconds(0.1f);
+
+        asyncLoad.allowSceneActivation = true;
+
+        while (!asyncLoad.isDone)
+        {
+            yield return null;
+        }
     }
 }
