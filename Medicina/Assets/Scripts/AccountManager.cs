@@ -4,37 +4,53 @@ using UnityEngine;
 using System.IO;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.XR.Interaction.Toolkit.UI;
 
 public class AccountManager : MonoBehaviour
 {
-    [Header("Referencias UI")]
+    [Header("Referencias VR")]
     public TMP_InputField nombreInput;
     public TMP_InputField correoInput;
     public TMP_InputField codigoInput;
     public TMP_InputField contrasenaInput;
     public TMP_Text txtFeedbackRegistro;
+    public XRUIInputModule vrInputModule; // Módulo de entrada para VR
 
-    [Header("Configuración")]
+    [Header("Configuración VR")]
     public float feedbackDuration = 2.5f;
+    public float uiDistance = 2f; // Distancia recomendada para UI en VR
+    public Vector3 uiOffset = new Vector3(0, -0.3f, 0); // Ajuste de altura
 
     private string dataPath;
     private AccountDatabase accountDatabase;
     private Coroutine feedbackCoroutine;
+    
     public static AccountManager Instance { get; private set; }
     void Awake()
     {
+
         if (Instance == null)
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
-            LoadAccounts(); // Cargar datos al iniciar
+            SetupVRUI();
+            LoadAccounts();
         }
         else
         {
             Destroy(gameObject);
         }
     }
-
+    void SetupVRUI()
+    {
+        // Configuración inicial para VR
+        GameObject uiCanvas = GetComponentInChildren<Canvas>().gameObject;
+        uiCanvas.transform.position = Camera.main.transform.position +
+                                    Camera.main.transform.forward * uiDistance +
+                                    uiOffset;
+        uiCanvas.transform.rotation = Quaternion.LookRotation(
+            uiCanvas.transform.position - Camera.main.transform.position);
+    }
     public void CreateAccount()
     {
         // Validar campos vacíos
@@ -125,6 +141,8 @@ public class AccountManager : MonoBehaviour
 
         // Regresar al menú principal
         ReturnToMainMenu();
+
+
     }
 
     void ReturnToMainMenu()
